@@ -1,0 +1,163 @@
+/* General Reset and Styling */
+/* Apply a box-sizing of border-box to all elements to include padding and border in the element's total width and height. 
+Remove default margin and padding. Set a universal font and background color for the entire page. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1B1B32;
+  color: white;
+}
+
+/* Ensure body content starts below the fixed navbar, preventing content from being hidden behind it */
+body {
+  line-height: 1.6; /* Improve readability with increased line height */
+  margin-top: 60px; /* Offset to accommodate fixed navbar height */
+}
+
+/* Navigation Bar */
+/* Style the fixed navbar to stay at the top, align items centrally, and apply a shadow for depth */
+#nav-bar {
+  position: fixed;
+  top: 0;
+  background-color: #1B1B32; /* Match overall background color */
+  height: 60px; /* Set height for navbar */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Style the navigation links */
+.nav-link {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Space between links */
+  font-size: 1rem; /* Standard font size */
+  transition: color 0.3s; /* Smooth transition for color change on hover */
+}
+
+/* Change link color to green on hover */
+.nav-link:hover {
+  color: #00A878; /* FreeCodeCamp green */
+}
+
+/* Style the header image to be responsive */
+#header-img {
+  width: 100%; /* Full width */
+  max-width: 200px; /* Maximum width */
+  height:70%; /* Set height */
+}
+
+/* Section Headers */
+/* Style the section headers */
+h3 {
+  margin: 20px 0 10px; /* Margin for spacing above and below */
+  text-align: center; /* Center-align text */
+  color: #00A878; /* Green color */
+  font-size: 1.5rem; /* Larger font size */
+}
+
+/* Style the horizontal rules for section separation */
+hr {
+  border: 0; /* Remove default border */
+  height: 1px; /* Set height */
+  background: #00A878; /* Green background */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+/* Content Styling */
+/* Style paragraphs */
+p {
+  margin: 10px 20px; /* Margin for spacing */
+  font-size: 1.1rem; /* Slightly larger font size */
+  text-align: justify; /* Justify text alignment */
+}
+
+/* Style unordered lists */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 10px 20px; /* Margin for spacing */
+}
+
+/* Style list items */
+li {
+  margin: 5px 0; /* Margin for spacing between items */
+  font-size: 1.1rem; /* Slightly larger font size */
+}
+
+/* Highlight the bold text in list items */
+li b {
+  color: #00A878; /* Green color */
+}
+
+/* Form Styling */
+/* Center and style the form */
+form {
+  text-align: center; /* Center-align form */
+  margin: 20px 0; /* Margin for spacing */
+}
+
+/* Style the email input field */
+input[type="email"] {
+  padding: 10px; /* Padding for input field */
+  font-size: 1rem; /* Standard font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  width: 80%; /* 80% width */
+  max-width: 300px; /* Maximum width */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  padding: 10px 20px; /* Padding for button */
+  font-size: 1rem; /* Standard font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #00A878; /* Green background */
+  color: white; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color change on hover */
+}
+
+/* Change submit button background color on hover */
+input[type="submit"]:hover {
+  background-color: #007B5E; /* Darker green */
+}
+
+/* Video Styling */
+/* Center and style the iframe video */
+#video {
+  display: block; /* Display as block element */
+  margin: 20px auto; /* Center and margin for spacing */
+  max-width: 560px; /* Maximum width */
+  width: 100%; /* Full width */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Media Queries */
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  /* Stack nav-bar links vertically on small screens */
+  #nav-bar {
+    flex-direction: column; /* Change direction to column */
+    height: auto; /* Auto height to accommodate content */
+  }
+
+  /* Add margin to nav-bar links on small screens */
+  .nav-link {
+    margin: 10px 0; /* Margin for spacing */
+  }
+
+  /* Ensure email input field is full width on small screens */
+  input[type="email"] {
+    width: 90%; /* 90% width */
+  }
+}
+
